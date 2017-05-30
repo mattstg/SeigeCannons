@@ -21,6 +21,9 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
+[Ll]ibrary/
+[Bb]uild/
+[Bb]uilds/
 
 # Visual Studio 2015 cache/options directory
 .vs/
@@ -48,7 +51,6 @@ artifacts/
 *_p.c
 *_i.h
 *.ilk
-*.meta
 *.obj
 *.pch
 *.pdb
@@ -88,6 +90,8 @@ ipch/
 *.vsp
 *.vspx
 *.sap
+*.csproj
+*.sln
 
 # TFS 2012 Local Workspace
 $tf/
