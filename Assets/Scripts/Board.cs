@@ -57,7 +57,11 @@ public class Board  {
         //Now set all of them acording to some level design
         LoadLevel(0);
     }
-    
+
+    public void SetTile(Vector2 v2, byte b, bool setTileGraphic = true)
+    { //Do not passed vectors that have not been yet parsed, it is not rounded here (GV.CorrectToGridLoc)
+        SetTile((int)v2.x, (int)v2.y, b, setTileGraphic);
+    }
 
     public void SetTile(int x, int y, byte b, bool setTileGraphic = true)
     {

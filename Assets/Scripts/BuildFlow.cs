@@ -5,16 +5,20 @@ using UnityEngine;
 
 public class BuildFlow : Flow {
 
-    public override void Update(float dt)
+    public override void MouseClicked(Vector2 v2)
     {
-
+        Debug.Log("clicked at");
     }
 
-    public override void Clicked(Vector2 loc)
+    public override void Initialize()
     {
         
     }
 
+    public override void Update(float dt)
+    {
+
+    }
 
     private void PlacePiece()
     {
@@ -47,5 +51,8 @@ public class BuildFlow : Flow {
         };
     }
 
-    
+    public override void Terminate()
+    {
+        //throw new NotImplementedException();
+    }
 }

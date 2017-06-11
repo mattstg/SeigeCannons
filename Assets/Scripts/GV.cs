@@ -10,4 +10,9 @@ public class GV  {
 
     public static List<Sprite> spriteList;
 
+
+    public static Vector2 CorrectToGridLoc(Vector2 v2)
+    {
+        return new Vector2(Mathf.RoundToInt(v2.x), Mathf.RoundToInt(v2.y));
+    }
 }
