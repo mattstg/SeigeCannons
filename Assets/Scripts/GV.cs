@@ -7,7 +7,7 @@ public class GV  {
     public enum ByteTile { Ground  = 0, Water = 1 }
     public static Transform spriteGridParent; //Is created and filled by Board.cs
     public static float spriteTileSize = 1; //100pixels
-
+    public static string byteMapSavePath = Application.dataPath + "/Saves/ByteMaps/";
     public static List<Sprite> spriteList;
 
 

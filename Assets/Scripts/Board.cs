@@ -86,4 +86,48 @@ public class Board  {
             break;
         }
     }
+
+    private void FillCheckAlgo(List<Vector2> toProcess)
+    {
+        //toProcess are the adjacent pieces to the new placed one
+        List<Vector2> closedList  = new List<Vector2>();
+        List<Vector2> openList    = new List<Vector2>();
+        List<Vector2> invalidList = new List<Vector2>();
+
+
+    }
+
+    public void SaveBoard(string saveName)
+    {
+        string path = GV.byteMapSavePath + saveName;
+        if (!System.IO.File.Exists(path))
+        {
+            System.IO.File.Create(path);
+        }
+
+        System.IO.TextWriter tw = new System.IO.StreamWriter(path,false);
+        for (int y = 0; y < yWidth; y++)
+            for (int x = 0; x < xWidth; x++)
+            {
+                tw.WriteLine(mainBoard[x, y].ToString().PadLeft(3, '0'));
+            }
+        tw.Close();
+    }
+
+    public void LoadBoard(string loadName)
+    {
+        int x = 0;
+        int y = 0;
+        foreach (var line in System.IO.File.ReadAllLines(GV.byteMapSavePath + loadName))
+        {
+            byte b = byte.Parse(line);
+            SetTile(x, y, b);
+            x++;
+            if(x >= xWidth)
+            {
+                x = 0;
+                y++;
+            }
+        }
+    }
 }
