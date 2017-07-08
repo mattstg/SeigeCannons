@@ -14,6 +14,8 @@ public class MainFlow : MonoBehaviour {
     {
         Board.Instance.SetupBoard(XWidth, YWidth);
         SwitchFlow(Flows.Editor);
+        if (!System.IO.Directory.Exists(GV.byteMapSavePath)) //if save directory doesnt exist, create it
+            System.IO.Directory.CreateDirectory(GV.byteMapSavePath);
         
 	}
 
