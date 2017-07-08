@@ -82,7 +82,7 @@ public class Board  {
             case 0: default:
                 for (int x = 0; x < xWidth; x++)
                     for (int y = 0; y < yWidth; y++)
-                        SetTile(x, y, (byte)(Random.Range(0, System.Enum.GetNames(typeof(GV.ByteTile)).Length)));
+					SetTile(x, y, (byte)(Random.Range(0, GV.lastTerrainIndex + 1)));
             break;
         }
     }
